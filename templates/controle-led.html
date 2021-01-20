@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Controle de LED</title>
+</head>
+ <body>
+   <h2> Cotnrole de LED </h2>
+   O olho esquerdo está {%if olho_esq%}
+   ligado
+   <button type="button"
+   onclick="window.location.href='/olho_esq/0';">
+   Desligar
+   </button>
+   {% else %}
+   desligado
+   <button type="button"
+   onclick="window.location.href='/olho_esq/1';">
+   Ligar</button> 
+   {%endif%}
+   <br/><br/>
+   O olho direito está
+   {%if olho_dir%}
+   ligado
+   <button type="button"
+   onclick="window.location.href='/olho_dir/0';">
+   Desligar</button>
+   {% else %}
+   desligado
+   <button type="button"
+   onclick="window.location.href='/olho_dir/1';">
+   Ligar</button>
+   {%endif%}
+ </body>
+</html>
